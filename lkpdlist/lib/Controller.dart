@@ -10,6 +10,6 @@ class controller extends GetxController {
   }
 
   List<String> daftar = [
-    'Apel'
+    'Apela'
   ].obs;
 }
