@@ -32,7 +32,7 @@ class absen extends StatelessWidget {
                           onPressed: () {
                             c.hapus(e.key);
                           },
-                          icon: const Icon(Icons.delete),
+                          icon: Icon(Icons.delete),
                         ),
                       ],
                     ),

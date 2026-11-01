@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:lkpdlist/Soal10.dart';
 import 'package:lkpdlist/Soal3.dart';
 import 'package:lkpdlist/Soal1.dart';
 import 'package:lkpdlist/Soal2.dart';
 import 'package:lkpdlist/Soal4.dart';
+import 'package:lkpdlist/Soal5.dart';
+import 'package:lkpdlist/Soal6.dart';
+import 'package:lkpdlist/Soal7.dart';
+import 'package:lkpdlist/Soal8.dart';
+import 'package:lkpdlist/Soal9.dart';
 import 'package:lkpdlist/absen.dart';
 import 'package:lkpdlist/belanja.dart';
 import 'package:lkpdlist/belanjaonline.dart';
@@ -64,6 +70,30 @@ class MyApp extends StatelessWidget {
         GetPage(
             name: '/soal4',
             page: () => hpsdt()
+        ),
+        GetPage(
+            name: '/soal5',
+            page: () => absnsis()
+        ),
+        GetPage(
+            name: '/soal6',
+            page: () => kelnil()
+        ),
+        GetPage(
+            name: '/soal7',
+            page: () => upsert()
+        ),
+        GetPage(
+            name: '/soal8',
+            page: () => filter()
+        ),
+        GetPage(
+            name: '/soal9',
+            page: () => nilrat()
+        ),
+        GetPage(
+            name: '/soal10',
+            page: () => batad()
         )
       ],
     );

@@ -17,11 +17,14 @@ class belanja extends StatelessWidget {
           TextField(
             controller: c.tkb,
           ),
-
           ElevatedButton(
               onPressed: c.tambah,
               child: Text('Tambah')
           ),
+          Text('Daftar Belanja',
+          style: TextStyle(
+            fontSize: 20
+          ),),
           Obx(() => ListView.builder(
             shrinkWrap: true,
             itemCount: c.daftar.length,
