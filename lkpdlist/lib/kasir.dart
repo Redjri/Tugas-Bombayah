@@ -17,6 +17,11 @@ class AntrianKasir extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
+            Obx(
+                () => Text('Antrian ke-${c.display}', style: TextStyle(
+                  fontSize: 25
+                ),)
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -34,6 +39,7 @@ class AntrianKasir extends StatelessWidget {
                 ),
               ],
             ),
+            Text('Antrian'),
             Obx(
                     () => ListView.builder(
                     shrinkWrap: true,

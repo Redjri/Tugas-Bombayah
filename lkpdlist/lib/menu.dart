@@ -14,6 +14,7 @@ class menu extends StatelessWidget {
       body: SingleChildScrollView(
         child: Expanded(
           child: Column(
+            spacing: 15,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
@@ -22,7 +23,6 @@ class menu extends StatelessWidget {
                   fontSize: 25
                 ),
               ),
-              SizedBox(height: 10),
               ElevatedButton(
                   onPressed: () {
                     Get.toNamed('/belanja');
@@ -53,14 +53,13 @@ class menu extends StatelessWidget {
                   },
                   child: Text('Soal 5: Keranjang Belanja')
               ),
-              SizedBox(height: 10),
+              SizedBox(height: 15),
               Text(
                 'LKPD Map',
                 style: TextStyle(
                     fontSize: 25
                 ),
               ),
-              SizedBox(height: 10),
               ElevatedButton(
                   onPressed: () {
                     Get.toNamed('/soal1');

@@ -22,8 +22,11 @@ class absnsis extends StatelessWidget {
                   itemBuilder: (context, i) {
                     final e = c.attendance.entries.elementAt(i);
                     return ListTile(
-                      title: Text(e.value),
-                      subtitle: Text(e.key),
+                      title: Text(e.key),
+                      subtitle: Text(e.value),
+                      leading: CircleAvatar(
+                        child: Text('${i+1}'),
+                      ),
                     );
                   },
                 )

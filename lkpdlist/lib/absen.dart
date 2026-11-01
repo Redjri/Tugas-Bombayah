@@ -22,20 +22,21 @@ class absen extends StatelessWidget {
                 itemCount: c.nsiswa.length,
                 itemBuilder: (context, i) {
                   final e = c.nsiswa.entries.elementAt(i);
-                  return ListTile(
-                    title: Text(e.key),
-                    subtitle: Text('${e.value}'),
-                    trailing: Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        IconButton(
-                          onPressed: () {
-                            c.hapus(e.key);
-                          },
-                          icon: Icon(Icons.delete),
+                  return Wrap(
+                    children: [
+                      GestureDetector(
+                        onTap: () {
+                          c.hapus(e.key);
+                        },
+                        child: ListTile(
+                          title: Text(e.key),
+                          subtitle: Text(e.value),
+                          leading: CircleAvatar(
+                            child: Text('${i + 1}'),
+                          ),
                         ),
-                      ],
-                    ),
+                      )
+                    ],
                   );
                 },
               ),
@@ -46,3 +47,19 @@ class absen extends StatelessWidget {
     );
   }
 }
+
+// ListTile(
+// title: Text(e.key),
+// subtitle: Text('${e.value}'),
+// trailing: Row(
+// mainAxisSize: MainAxisSize.min,
+// children: [
+// IconButton(
+// onPressed: () {
+// c.hapus(e.key);
+// },
+// icon: Icon(Icons.delete),
+// ),
+// ],
+// ),
+// );

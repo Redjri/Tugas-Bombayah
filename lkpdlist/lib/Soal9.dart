@@ -25,11 +25,14 @@ class nilrat extends StatelessWidget {
                       return ListTile(
                         title: Text(e.key),
                         subtitle: Text('Nilai: ${e.value.toString()}'),
+                        leading: CircleAvatar(
+                          child: Text('${i + 1}'),
+                        ),
                       );
                     }
                 )
             ),
-            Text('Nilai Rata-Rata adalah: ${c.averageGrade.toStringAsFixed(2)}')
+            Text('Nilai Rata-Rata adalah: ${c.averageGrade.toStringAsFixed(2)}', style: TextStyle(fontSize: 20),)
           ],
         ),
       ),

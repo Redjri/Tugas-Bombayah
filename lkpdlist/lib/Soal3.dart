@@ -24,6 +24,7 @@ class datke extends StatelessWidget {
                     return ListTile(
                       title: Text('Nama Produk: ${e.value}'),
                       subtitle: Text('Kuantitas: ${e.key}'),
+
                     );
                   }
                 )
@@ -31,6 +32,9 @@ class datke extends StatelessWidget {
             Text('Control Panel'),
             TextField(
               controller: c.tecc,
+              decoration: InputDecoration(
+                  hint: Text('Input Kuantitas')
+              ),
             ),
             ElevatedButton(
                 onPressed: () => c.stokupdate("B001"),

@@ -25,6 +25,9 @@ class upsert extends StatelessWidget {
                       return ListTile(
                         title: Text(e.key),
                         subtitle: Text('Rating: ${e.value.toString()}'),
+                        leading: CircleAvatar(
+                          child: Text('${i + 1}'),
+                        ),
                         trailing: Icon(Icons.star),
                       );
                     }

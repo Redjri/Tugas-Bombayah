@@ -20,6 +20,9 @@ class todolist extends StatelessWidget {
           children: [
             TextField(
               controller: c.tugasfield,
+              decoration: InputDecoration(
+                  hint: Text('Input Tugas')
+              ),
             ),
             ElevatedButton(
                 onPressed: c.tambahtugas,
@@ -43,6 +46,9 @@ class todolist extends StatelessWidget {
                               itemBuilder: (context, i) => ListTile(
                                 title: Text(c.belumselesai[i]),
                                 onTap: () => c.tandaiselesai(c.belumselesai[i]),
+                                leading: CircleAvatar(
+                                  child: Text('${i+1}'),
+                                ),
                               )
                           )
                       )
@@ -60,7 +66,9 @@ class todolist extends StatelessWidget {
                             itemCount: c.selesai.length,
                             itemBuilder: (context, i) => ListTile(
                               title: Text(c.selesai[i]),
-                              onTap: () => c.hapus1(c.selesai[i]),
+                              trailing: IconButton(
+                                  onPressed: () => c.hapus1(c.selesai[i]),
+                                  icon: Icon(Icons.delete)),
                             )
                           )
                       )

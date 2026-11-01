@@ -22,6 +22,9 @@ class vimap extends StatelessWidget {
                   return ListTile(
                     title: Text(entry.value),
                     subtitle: Text('Kode ${entry.key}'),
+                    leading: CircleAvatar(
+                      child: Text('${i+1}'),
+                    ),
                   );
                 }
         )

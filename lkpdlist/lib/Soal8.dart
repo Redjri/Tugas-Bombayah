@@ -13,7 +13,8 @@ class filter extends StatelessWidget {
         title: Text('Reset Filter'),
       ),
       body: SingleChildScrollView(
-        child: Row(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Obx(
                 () => Wrap(

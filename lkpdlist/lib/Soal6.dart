@@ -22,13 +22,13 @@ class kelnil extends StatelessWidget {
                     itemBuilder: (context, i) {
                       final e = c.itemPrices.entries.elementAt(i);
                       return ListTile(
-                        title: Text(e.value.toString()),
-                        subtitle: Text(e.key),
+                        title: Text(e.key),
+                        subtitle: Text('Harga: ${e.value.toString()}'),
                       );
                     }
                 )
             ),
-            Text('Total Bayar: RP ${c.totalPrice}')
+            Text('Total Bayar: RP ${c.totalPrice}', style: TextStyle(fontSize: 15),)
           ],
         ),
       ),

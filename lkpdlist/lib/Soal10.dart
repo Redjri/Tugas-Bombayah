@@ -24,6 +24,9 @@ class batad extends StatelessWidget {
                       return ListTile(
                         title: Text(e.key),
                         subtitle: Text(e.value),
+                        leading: CircleAvatar(
+                          child: Text('${i + 1}'),
+                        ),
                       );
                     }
                 )

@@ -7,7 +7,7 @@ class controller extends GetxController {
   final tkb = TextEditingController();
 
   var daftar = <String>[
-    'Apela'
+    'Apel'
   ].obs;
 
   void tambah() {
@@ -26,8 +26,8 @@ class controller extends GetxController {
     'Mirza Yamadwipa': 'Hadir'
   }.obs;
 
-  void hapus(String k){
-    nsiswa.remove(k);
+  void hapus(String i){
+    nsiswa.remove(i);
   }
 
   // soal 3
@@ -38,6 +38,8 @@ class controller extends GetxController {
 
   int nomor = 1;
 
+  final display = 0.obs;
+
   void tambantrian () {
 
     antrian.add(nomor);
@@ -47,6 +49,7 @@ class controller extends GetxController {
   void remove () {
     antrian.clear();
     nomor = 1;
+    display.value = 0;
   }
 
   void panggil () {
@@ -60,7 +63,8 @@ class controller extends GetxController {
           duration: Duration(seconds: 2)
       );
     } else {
-      antrian.remove(antrian.first);
+      display.value = antrian.first;
+      antrian.removeAt(0);
     }
   }
 

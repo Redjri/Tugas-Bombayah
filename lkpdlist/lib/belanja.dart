@@ -16,6 +16,9 @@ class belanja extends StatelessWidget {
         children: [
           TextField(
             controller: c.tkb,
+            decoration: InputDecoration(
+              hint: Text('Input Belanja')
+            ),
           ),
           ElevatedButton(
               onPressed: c.tambah,
@@ -30,6 +33,9 @@ class belanja extends StatelessWidget {
             itemCount: c.daftar.length,
             itemBuilder: (context, i) => ListTile(
               title: Text(c.daftar[i]),
+              leading: CircleAvatar(
+                child: Text('${i + 1}'),
+              ),
             )
           ))
         ],

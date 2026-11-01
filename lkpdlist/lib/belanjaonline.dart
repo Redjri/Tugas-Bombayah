@@ -45,6 +45,9 @@ class belanjonline extends StatelessWidget {
                     itemCount: c.keranjang.length,
                     itemBuilder: (context, i) => ListTile(
                       title: Text(c.keranjang[i].toString()),
+                      leading: CircleAvatar(
+                        child: Text('${i+1}'),
+                      ),
                     ),
                 )
             ),

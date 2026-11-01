@@ -15,13 +15,17 @@ class manakeja extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Text('Input ID'),
             TextField(
               controller: c.tecid,
+              decoration: InputDecoration(
+                  hint: Text('Input ID')
+              ),
             ),
-            Text('Input Nama'),
             TextField(
               controller: c.tecname,
+              decoration: InputDecoration(
+                  hint: Text('Input Nama')
+              ),
             ),
             ElevatedButton(
                 onPressed: c.addItem,
@@ -38,6 +42,9 @@ class manakeja extends StatelessWidget {
                     return ListTile(
                       title: Text('Nama Produk: ${e.value}'),
                       subtitle: Text('ID Produk: ${e.key}'),
+                      leading: CircleAvatar(
+                        child: Text('${i+1}'),
+                      ),
                     );
                   },
                 )

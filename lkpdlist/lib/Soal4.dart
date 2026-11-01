@@ -23,8 +23,8 @@ class hpsdt extends StatelessWidget {
                     itemBuilder: (context, i) {
                       final e = c.bookmarks.entries.elementAt(i);
                       return ListTile(
-                        title: Text('Nama Produk: ${e.value}'),
-                        subtitle: Text('Kuantitas: ${e.key}'),
+                        title: Text('Nama Produk: ${e.key}'),
+                        subtitle: Text('Kuantitas: ${e.value}'),
                         trailing: IconButton(
                             onPressed: () => c.removeBookmark(e.key),
                             icon: Icon(Icons.delete)
