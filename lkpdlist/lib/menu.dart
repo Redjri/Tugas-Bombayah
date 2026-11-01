@@ -78,6 +78,12 @@ class menu extends StatelessWidget {
                 },
                 child: Text('Soal 3: Ubah Data Berdasarkan Key (Pembaruan Stok Barang)')
             ),
+            ElevatedButton(
+                onPressed: () {
+                  Get.toNamed('/soal4');
+                },
+                child: Text('Soal 4: Hapus Data Berdasarkan Key (Manajemen Daftar Kontak / Bookmark)')
+            ),
           ],
         ),
       ),

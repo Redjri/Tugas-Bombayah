@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
@@ -19,5 +21,32 @@ class controllermap extends GetxController {
 
   void addItem () {
     cart[tecid.text] = tecname.text;
+  }
+
+  //soal 3
+  var stockmap = <String, int> {
+    "B001" : 10,
+    "B002" : 15,
+  }.obs;
+
+  final tecc = TextEditingController();
+
+
+  void stokupdate (String id) {
+    int quantity = int.parse(tecc.text);
+
+    if (stockmap.containsKey(id)) {
+      stockmap[id] = quantity;
+    }
+  }
+
+  //soal 4
+  var bookmarks = <String, String> {
+    "ART01": "Kabar Berita A",
+    "ART02": "Kabar Berita B"
+  }.obs;
+
+  void removeBookmark(String articleId) {
+    bookmarks.remove(articleId);
   }
 }

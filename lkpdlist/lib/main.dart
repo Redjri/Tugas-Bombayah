@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:lkpdlist/Soal3.dart';
 import 'package:lkpdlist/Soal1.dart';
 import 'package:lkpdlist/Soal2.dart';
+import 'package:lkpdlist/Soal4.dart';
 import 'package:lkpdlist/absen.dart';
 import 'package:lkpdlist/belanja.dart';
 import 'package:lkpdlist/belanjaonline.dart';
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
             name: '/menu',
             page: () => menu()
         ),
+        //list
         GetPage(
             name: '/belanja',
             page: () => belanja()
@@ -46,6 +48,7 @@ class MyApp extends StatelessWidget {
             name: '/belanjaon',
             page: () => belanjonline()
         ),
+        //Map
         GetPage(
             name: '/soal1',
             page: () => vimap()
@@ -57,6 +60,10 @@ class MyApp extends StatelessWidget {
         GetPage(
             name: '/soal3',
             page: () => datke()
+        ),
+        GetPage(
+            name: '/soal4',
+            page: () => hpsdt()
         )
       ],
     );
