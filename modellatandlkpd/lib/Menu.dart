@@ -31,6 +31,14 @@ class menu extends StatelessWidget {
                   onPressed: () => Get.toNamed('/soal2'),
                   child: Text('Soal 2: Tambah Model Baru ke List (Aplikasi Catatan Tugas / To-Do List)')
               ),
+              ElevatedButton(
+                  onPressed: () => Get.toNamed('/soal3'),
+                  child: Text('Soal 3: Ubah Atribut Model Reaktif Tunggal (Profil Pengguna)')
+              ),
+              ElevatedButton(
+                  onPressed: () => Get.toNamed('/soal4'),
+                  child: Text('Soal 4: Hapus Model dari List Berdasarkan ID (Daftar Keranjang Belanja)')
+              ),
             ],
           ),
         ),

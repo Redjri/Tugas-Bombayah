@@ -26,4 +26,33 @@ class soalController extends GetxController {
     var newTask = TaskModel(id: DateTime.now().toString(), title: teTugasBaru.text);
     taskList.add(newTask);
   }
+
+  // soal 3
+  var user = UserModel(
+      name: 'Budi',
+      email: 'budi@gmail.com'
+  ).obs;
+
+  void UpdateProfil (String NewName, String NewEmail) {
+    user.update((val) {
+      val?.name = NewName;
+      val?.email = NewEmail;
+    });
+  }
+
+  // soal 4
+  var cartItems = <CartModel> [
+    CartModel(
+        id: 'C01',
+        name: 'Sepatu'
+    ),
+    CartModel(
+        id: 'C02',
+        name: 'Tas'
+    ),
+  ].obs;
+
+  void removeItem(String id) {
+    cartItems.removeWhere((item) => item.id == id);
+  }
 }
