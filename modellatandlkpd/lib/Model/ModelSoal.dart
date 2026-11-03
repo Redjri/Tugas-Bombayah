@@ -46,3 +46,79 @@ class CartModel {
   }
   );
 }
+
+// soal 5
+class StudentModel {
+  String name;
+  bool isPassed;
+
+  StudentModel(
+  {
+    required this.name,
+    required this.isPassed
+  }
+  );
+}
+
+// soall 6
+class OrderItemModel {
+  String title;
+  int price;
+  int qty;
+
+  OrderItemModel(
+  {
+    required this.title,
+    required this.price,
+    required this.qty
+}
+      );
+}
+
+// soal 7
+class MedicineModel {
+  String id, name;
+  bool isTaken;
+
+  MedicineModel(
+  {
+    required this.name,
+    required this.id,
+    this.isTaken = false
+  }
+  );
+}
+
+// soal 8
+class HistoryModel {
+  String location;
+
+  HistoryModel({
+    required this.location
+  }
+  );
+}
+
+// soal 9
+class FeedbackModel {
+  double rating;
+  String comment;
+
+  FeedbackModel(
+  {
+    required this.rating,
+    required this.comment
+}
+      );
+}
+
+// saol 10
+class NewsModel {
+  String title;
+
+  NewsModel(
+  {
+    required this.title
+}
+      );
+}
